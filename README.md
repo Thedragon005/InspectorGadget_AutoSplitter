@@ -1,0 +1,130 @@
+# InspectorGadget_AutoSplitter
+First project in ASL,do not hesitate to comment of improve
+
+<h2>Compability</h2>
+<table>
+<thead>
+  <tr>
+    <th>Snes9x</th>
+    <th>Higan</th>
+    <th>Bsnes</th>
+    <th>BizHawk</th>
+    <th>Lsnes</th>
+    <th>Retroarch</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1.53</td>
+    <td>v102</td>
+    <td>v107</td>
+    <td>2.3</td>
+    <td>rr2-B23</td>
+    <td>1.7.5</td>
+  </tr>
+  <tr>
+    <td>1.54</td>
+    <td>v103</td>
+    <td>v107.1</td>
+    <td>2.3.1</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1.54-rr</td>
+    <td>v104</td>
+    <td>v107.2</td>
+    <td>2.3.2</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1.54.1</td>
+    <td>v105tr1</td>
+    <td>v107.3</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1.55</td>
+    <td>v106</td>
+    <td>v108</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1.56</td>
+    <td>v106.112</td>
+    <td>v109</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1.56.1</td>
+    <td>v107</td>
+    <td>v110</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1.56.2</td>
+    <td>v108</td>
+    <td>v111</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1.57</td>
+    <td>v109</td>
+    <td>v112</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1.58</td>
+    <td>v110</td>
+    <td>v115</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1.59.2</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1.60-rr</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>1.60</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+<h2>Features</h2>
+
+	<bold>Start</bold>
+	Starts when you press start on the "Press start" prompt
+	<h3>Splits</h3>
+	For each of the 6 stages
+	<h3>Reset</h3>
+	Detect status changes while resseting
