@@ -7,7 +7,6 @@ state("LiveSplit") {}
 
 startup
 {
-    settings.Add("debugmode", false, "Show debug(DebugView)");
 }
 
 init 
