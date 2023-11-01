@@ -140,7 +140,7 @@ init
             new MemoryWatcher<byte>((IntPtr)memoryOffset + 0x067A) { Name = "finalBossFightState" },
         };
 vars.Boss2Axe = true;
-vars.BossPhase2 = false;
+vars.Boss2Phase2 = false;
 vars.InBoss3_5 = false;
 
 
@@ -179,7 +179,7 @@ reset {
 onReset
 {
     vars.Boss2Axe = true;
-    vars.BossPhase2 = false;
+    vars.Boss2Phase2 = false;
     vars.InBoss3_5 = false;
 }
 split {
