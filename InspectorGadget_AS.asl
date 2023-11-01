@@ -176,6 +176,12 @@ reset {
     return vars.watchers["startmenu"].Old == 4 && vars.watchers["startmenu"].Current!= 4 ;
 }
 
+onReset
+{
+    vars.Boss2Axe = true;
+    vars.BossPhase2 = false;
+    vars.InBoss3_5 = false;
+}
 split {
     var isAlive = vars.watchers["deathreason"].Current == 0;
     var currentStage = vars.watchers["currentStage"].Current;
