@@ -124,6 +124,6 @@ First project in ASL,do not hesitate to comment of improve
 <h3>Start</h3>
 Starts when you press start on the "Press start" prompt
 <h3>Splits</h3>
-Splits for each of the 6 stages and when gadget corss the arch at the end
+Splits for each of the 6 stages and when gadget cross the arch at the end
 <h3>Reset</h3>
 Detect game status changes while resseting and reset the timer
