@@ -139,7 +139,7 @@ init
             new MemoryWatcher<byte>((IntPtr)memoryOffset + 0x1057) { Name = "s4_BossLife" },
             new MemoryWatcher<byte>((IntPtr)memoryOffset + 0x067A) { Name = "finalBossFightState" },
         };
-
+vars.Boss2Axe = true;
 vars.BossPhase2 = false;
 vars.InBoss3_5 = false;
 
@@ -149,8 +149,14 @@ update {
     vars.watchers.UpdateAll(game);
     //Boss 2 is a two phase boss
     //Need a toggle because life goes from 9 to 0 once,then switching AxeStatus from 7 to 8 and life goes from 9 to 0 again
-    if (vars.watchers["s2_BossAxeStatus"].Current == 8 && vars.watchers["S235_BossLife"].Old == 0 && vars.watchers["S235_BossLife"].Current == 9){
-        vars.BossPhase2 = true;
+    if (vars.watchers["s2_BossAxeStatus"].Old == 7 && vars.watchers["s2_BossAxeStatus"].Current == 8 && vars.watchers["S235_BossLife"].Current == 0){
+        vars.Boss2Axe = false;
+    }
+    if (vars.Boss2Axe == false)
+    {
+        if (vars.watchers["s2_BossAxeStatus"].Current == 8 && vars.watchers["S235_BossLife"].Old == 0 && vars.watchers["S235_BossLife"].Current == 9){
+            vars.Boss2Phase2 = true;
+        }
     }
     //If stage = 3 or 5,the player is in boss fight when life is 15
     //Needed because value 0x0FDF is used for enemies too.
@@ -174,7 +180,7 @@ split {
     var isAlive = vars.watchers["deathreason"].Current == 0;
     var currentStage = vars.watchers["currentStage"].Current;
     var stage1 = isAlive && currentStage == 1 && vars.watchers["s1_BossLife"].Old == 3 && vars.watchers["s1_BossLife"].Current == 0;
-    var stage2 = isAlive && currentStage == 2 && vars.BossPhase2 && vars.watchers["S235_BossLife"].Old == 3 && vars.watchers["S235_BossLife"].Current == 0;
+    var stage2 = isAlive && currentStage == 2 && vars.Boss2Phase2 && vars.watchers["S235_BossLife"].Old == 3 && vars.watchers["S235_BossLife"].Current == 0;
     var stage3 = isAlive && currentStage == 3 && vars.InBoss3_5 && vars.watchers["S235_BossLife"].Old == 3 && vars.watchers["S235_BossLife"].Current == 0;
     var stage4 = isAlive && currentStage == 4 && vars.watchers["s4_BossLife"].Old == 3 && vars.watchers["s4_BossLife"].Current == 0;
     var stage5 = isAlive && currentStage == 5 && vars.InBoss3_5 && vars.watchers["S235_BossLife"].Old == 3 && vars.watchers["S235_BossLife"].Current == 0;
