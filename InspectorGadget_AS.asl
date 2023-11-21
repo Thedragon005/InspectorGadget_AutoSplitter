@@ -204,6 +204,6 @@ split {
     var stage4 = isAlive && currentStage == 4 && vars.InBoss4 && (vars.watchers["s4_BossLife"].Old == 6 || vars.watchers["s4_BossLife"].Old == 3) && vars.watchers["s4_BossLife"].Current == 0;
     var stage5 = isAlive && currentStage == 5 && vars.InBoss3_5 && vars.watchers["S235_BossLife"].Old == 3 && vars.watchers["S235_BossLife"].Current == 0;
     var end = isAlive && currentStage == 6 && vars.watchers["finalBossFightState"].Old == 10 && vars.watchers["finalBossFightState"].Current == 11;
-
+ 
     return stage1 || stage2 || stage3 || stage4 || stage5 || end;
 }
