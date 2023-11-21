@@ -199,9 +199,9 @@ split {
     var isAlive = vars.watchers["deathreason"].Current == 0;
     var currentStage = vars.watchers["currentStage"].Current;
     var stage1 = isAlive && currentStage == 1 && vars.watchers["s1_BossLife"].Old == 3 && vars.watchers["s1_BossLife"].Current == 0;
-    var stage2 = isAlive && currentStage == 2 && vars.Boss2Phase2 && vars.watchers["S235_BossLife"].Old == 3 && vars.watchers["S235_BossLife"].Current == 0;
-    var stage3 = isAlive && currentStage == 3 && vars.InBoss3_5 && vars.watchers["S235_BossLife"].Old == 3 && vars.watchers["S235_BossLife"].Current == 0;
-    var stage4 = isAlive && currentStage == 4 && vars.InBoss4 && vars.watchers["s4_BossLife"].Old == 3 && vars.watchers["s4_BossLife"].Current == 0;
+    var stage2 = isAlive && currentStage == 2 && vars.Boss2Phase2 && (vars.watchers["S235_BossLife"].Old == 6 || vars.watchers["S235_BossLife"].Old == 3) && vars.watchers["S235_BossLife"].Current == 0;
+    var stage3 = isAlive && currentStage == 3 && vars.InBoss3_5 && (vars.watchers["S235_BossLife"].Old == 6 || vars.watchers["S235_BossLife"].Old == 3) && vars.watchers["S235_BossLife"].Current == 0;
+    var stage4 = isAlive && currentStage == 4 && vars.InBoss4 && (vars.watchers["s4_BossLife"].Old == 6 || vars.watchers["s4_BossLife"].Old == 3) && vars.watchers["s4_BossLife"].Current == 0;
     var stage5 = isAlive && currentStage == 5 && vars.InBoss3_5 && vars.watchers["S235_BossLife"].Old == 3 && vars.watchers["S235_BossLife"].Current == 0;
     var end = isAlive && currentStage == 6 && vars.watchers["finalBossFightState"].Old == 10 && vars.watchers["finalBossFightState"].Current == 11;
 
