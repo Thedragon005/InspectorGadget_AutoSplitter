@@ -179,7 +179,7 @@ update {
     if (vars.watchers["currentStage"].Changed) vars.InBoss3_5 = false;
     
     //Reset BossState #2 on death to reset the fight
-    var isAlive = vars.watchers["deathreason"].Current == 0;
+    vars.isAlive = vars.watchers["deathreason"].Current == 0;
     if (vars.isAlive == false)
     {
         vars.Boss2Axe = true;
