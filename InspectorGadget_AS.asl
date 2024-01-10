@@ -176,7 +176,20 @@ update {
         }
     }
     //Reset BossState to false
-    if (vars.watchers["currentStage"].Changed) vars.InBoss3_5 = false;
+    if (vars.watchers["currentStage"].Changed)
+    {
+        vars.InBoss3_5 = false;
+    }
+    vars.isAlive = vars.watchers["deathreason"].Current == 0;
+    
+    //If the player dies in Stage 2,reset boss state to Phase 1
+    if (vars.isAlive == false && vars.watchers["currentStage"].Current == 2)
+    {
+        vars.Boss2Axe = true;
+        vars.Boss2Phase2 = false;
+        vars.isAlive = true;
+        vars.resetFight = false;
+    }
 }
 
 start {
